@@ -1,0 +1,20 @@
+::ng-deep .swal2-title {
+    font-size: 30px !important;
+    font-weight: 600 !important;
+}
+
+
+
+::ng-deep .swal2-icon.swal2-info {
+    border-color: #b02727bf !important;
+    color: #b02727bf !important;
+}
+.hero-image {
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/26/14/11/chef-1417239_960_720.png");
+    background-color: #cccccc;
+    height: 720px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
