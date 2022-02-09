@@ -68,6 +68,26 @@ router.get("/allHotel",async(req,res) => {
 }
 )
 
+router.delete('/deleteUser',async (req,res) => {
+    try {
+        const outcomeId=req.body.id;
+        const removedOutcome = await User.deleteOne({_id:outcomeId});
+        res.json({"message":"Deleted Outcome"});
+    } catch (error) {
+        res.json({"message":"Unable to delete"});
+    }
+});
+
+router.delete('/deleteHotel',async (req,res) => {
+    try {
+        const outcomeId=req.body.id;
+        const removedOutcome = await Hotel.deleteOne({_id:outcomeId});
+        res.json({"message":"Deleted Outcome"});
+    } catch (error) {
+        res.json({"message":"Unable to delete"});
+    }
+});
+
 router.post('/login', async(req, res) => {
     let userData = req.body;
 
