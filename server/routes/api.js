@@ -48,6 +48,26 @@ router.post('/register', async(req, res) => {
     
 });
 
+router.get("/allUsers",async(req,res) => {
+    const usersData= await User.find({});
+    try{
+        res.send(usersData);
+    } catch(error) {
+        res.send("Error aa gya");
+    }
+}
+)
+
+router.get("/allHotel",async(req,res) => {
+    const usersData= await Hotel.find({});
+    try{
+        res.send(usersData);
+    } catch(error) {
+        res.send("Error aa gya Hotel DAta me");
+    }
+}
+)
+
 router.post('/login', async(req, res) => {
     let userData = req.body;
 
